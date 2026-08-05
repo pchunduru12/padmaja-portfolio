@@ -4,15 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Padmaja Chunduru | Technology, Transformation, and AI</title>
-  <meta name="description" content="Padmaja Chunduru is a senior technology and transformation leader — 20+ years across enterprise platforms, data governance, and AI readiness — who also builds AI applications hands-on." />
+  <meta
+    name="description"
+    content="Padmaja Chunduru is a senior technology and transformation leader who builds AI applications and helps complex organizations turn ambitious ideas into working capabilities."
+  />
   <link rel="canonical" href="https://pchunduru12.github.io/padmaja-portfolio/" />
+
   <meta property="og:title" content="Padmaja Chunduru | Technology, Transformation, and AI" />
-  <meta property="og:description" content="Senior technology and transformation leader. Cantor Fitzgerald, McKinsey, Oracle Cloud advisory — and hands-on AI builder." />
+  <meta
+    property="og:description"
+    content="Enterprise technology leader, hands-on AI builder, and advisor focused on discovery, execution, and institutional change."
+  />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pchunduru12.github.io/padmaja-portfolio/" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
     :root {
       --paper: #f6f5f1;
@@ -23,8 +35,8 @@
       --accent-ink: #16295f;
       --rule: #d9d6cd;
       --rule-strong: #b9b4a6;
-      --bronze: #9a6b2f;
-      --max: 960px;
+      --bronze: #916126;
+      --max: 980px;
       --serif: "Newsreader", Georgia, serif;
       --sans: "Public Sans", "Segoe UI", Arial, sans-serif;
       --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
@@ -32,6 +44,7 @@
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       * { transition: none !important; }
@@ -46,13 +59,31 @@
       font-size: 1rem;
     }
 
-    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
     a:hover { color: var(--accent-ink); }
+
     a:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 3px;
       border-radius: 2px;
     }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 8px;
+      padding: 8px 12px;
+      background: var(--accent);
+      color: #fff;
+      z-index: 100;
+    }
+
+    .skip-link:focus { left: 8px; }
 
     .container {
       max-width: var(--max);
@@ -60,7 +91,6 @@
       padding: 0 24px 64px;
     }
 
-    /* ── Top bar ─────────────────────────────── */
     .topbar {
       display: flex;
       justify-content: space-between;
@@ -70,24 +100,31 @@
       padding: 26px 0;
       border-bottom: 1px solid var(--rule);
     }
+
     .brand {
       font-family: var(--serif);
       font-weight: 600;
-      font-size: 1.1rem;
+      font-size: 1.12rem;
       color: var(--ink);
       letter-spacing: 0.01em;
     }
+
     .top-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px 20px;
+      gap: 8px 18px;
       font-size: 0.9rem;
     }
-    .top-links a { color: var(--muted); text-decoration: none; }
+
+    .top-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
     .top-links a:hover { color: var(--accent); }
 
-    /* ── Hero ────────────────────────────────── */
-    .hero { padding: 64px 0 48px; }
+    .hero { padding: 66px 0 48px; }
+
     .eyebrow {
       font-family: var(--mono);
       font-size: 0.78rem;
@@ -96,32 +133,39 @@
       color: var(--bronze);
       margin-bottom: 20px;
     }
+
     h1 {
       margin: 0;
+      max-width: 22ch;
       font-family: var(--serif);
       font-weight: 500;
-      font-size: clamp(2.2rem, 5.5vw, 3.4rem);
-      line-height: 1.12;
-      letter-spacing: -0.015em;
-      max-width: 21ch;
+      font-size: clamp(2.25rem, 5.5vw, 3.5rem);
+      line-height: 1.11;
+      letter-spacing: -0.016em;
     }
+
     h1 em {
       font-style: italic;
       color: var(--accent);
     }
+
     .subtitle {
       margin-top: 22px;
-      max-width: 62ch;
+      max-width: 68ch;
       font-size: 1.08rem;
       color: var(--muted);
     }
+
     .hero-links {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 30px;
     }
-    .hero-links a {
+
+    .hero-links a,
+    .button-link {
+      display: inline-block;
       text-decoration: none;
       padding: 10px 18px;
       border: 1px solid var(--rule-strong);
@@ -132,13 +176,19 @@
       background: var(--surface);
       transition: border-color 0.15s ease, background 0.15s ease;
     }
-    .hero-links a.primary {
+
+    .hero-links a.primary,
+    .button-link.primary {
       background: var(--accent);
       border-color: var(--accent);
       color: #fff;
     }
-    .hero-links a:hover { border-color: var(--accent); }
-    .hero-links a.primary:hover { background: var(--accent-ink); }
+
+    .hero-links a:hover,
+    .button-link:hover { border-color: var(--accent); }
+
+    .hero-links a.primary:hover,
+    .button-link.primary:hover { background: var(--accent-ink); }
 
     .proofline {
       margin-top: 40px;
@@ -150,6 +200,7 @@
       font-size: 0.92rem;
       color: var(--muted);
     }
+
     .proofline strong {
       display: block;
       color: var(--ink);
@@ -157,30 +208,45 @@
       margin-bottom: 2px;
     }
 
-    /* ── Sections ────────────────────────────── */
     .section { padding: 46px 0 8px; }
-    .section + .section { border-top: 1px solid var(--rule); margin-top: 38px; }
+
+    .section + .section {
+      border-top: 1px solid var(--rule);
+      margin-top: 38px;
+    }
+
     h2 {
       margin: 0 0 22px;
       font-family: var(--serif);
       font-weight: 500;
-      font-size: 1.7rem;
+      font-size: 1.75rem;
       letter-spacing: -0.01em;
     }
-    h3 { margin: 0 0 8px; font-size: 1.02rem; font-weight: 600; }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1.02rem;
+      font-weight: 600;
+    }
+
     p { margin: 0 0 16px; }
     .muted { color: var(--muted); }
-    ul { margin: 0; padding-left: 20px; }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
     li { margin-bottom: 10px; }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 26px 40px;
+      gap: 28px 42px;
     }
+
     .card p { font-size: 0.96rem; }
 
-    /* ── Ledger-style experience ─────────────── */
     .ledger-item {
       display: grid;
       grid-template-columns: 150px 1fr;
@@ -188,7 +254,12 @@
       padding: 22px 0;
       border-top: 1px solid var(--rule);
     }
-    .ledger-item:first-of-type { border-top: none; padding-top: 4px; }
+
+    .ledger-item:first-of-type {
+      border-top: none;
+      padding-top: 4px;
+    }
+
     .ledger-date {
       font-family: var(--mono);
       font-size: 0.82rem;
@@ -196,56 +267,137 @@
       padding-top: 3px;
       white-space: nowrap;
     }
+
     .ledger-body strong { font-size: 1.03rem; }
+
     .ledger-org {
       color: var(--accent);
       font-weight: 600;
       font-size: 0.92rem;
       margin: 2px 0 8px;
     }
-    .ledger-body p { font-size: 0.96rem; margin-bottom: 0; }
 
-    /* ── Projects ────────────────────────────── */
+    .ledger-body p {
+      font-size: 0.96rem;
+      margin-bottom: 0;
+    }
+
     .project {
-      padding: 20px 0;
+      padding: 21px 0;
       border-top: 1px solid var(--rule);
     }
-    .project:first-of-type { border-top: none; padding-top: 4px; }
-    .project a.title {
+
+    .project:first-of-type {
+      border-top: none;
+      padding-top: 4px;
+    }
+
+    .project a.title,
+    .project .title-static {
       font-family: var(--serif);
-      font-size: 1.15rem;
+      font-size: 1.18rem;
       font-weight: 600;
       text-decoration: none;
+      color: var(--accent);
     }
+
     .project a.title:hover { text-decoration: underline; }
+
     .project .tag {
+      display: inline-block;
       font-family: var(--mono);
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       color: var(--bronze);
-      letter-spacing: 0.1em;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
       margin-left: 10px;
     }
-    .project p { margin: 6px 0 0; font-size: 0.96rem; }
 
-    /* ── Writing ─────────────────────────────── */
-    .article { padding: 14px 0; border-top: 1px solid var(--rule); }
-    .article:first-of-type { border-top: none; padding-top: 0; }
-    .article a { font-weight: 600; text-decoration: none; }
+    .project p {
+      margin: 7px 0 0;
+      font-size: 0.96rem;
+    }
+
+    .article {
+      padding: 14px 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    .article:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .article a {
+      font-weight: 600;
+      text-decoration: none;
+    }
+
     .article a:hover { text-decoration: underline; }
-    .article p { margin: 4px 0 0; font-size: 0.94rem; }
 
-    /* ── Contact / footer ────────────────────── */
+    .article p {
+      margin: 4px 0 0;
+      font-size: 0.94rem;
+    }
+
+    .mission-panel {
+      padding: 28px 30px;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--bronze);
+      border-radius: 10px;
+    }
+
+    .mission-panel p:last-of-type { margin-bottom: 0; }
+
+    .contribution-list {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 28px;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .contribution-list li {
+      position: relative;
+      padding-left: 18px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .contribution-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--bronze);
+    }
+
     .contact {
       margin-top: 56px;
-      padding: 36px;
+      padding: 38px;
       background: var(--surface);
       border: 1px solid var(--rule);
       border-radius: 14px;
       text-align: center;
     }
+
     .contact h2 { margin-bottom: 10px; }
-    .contact p { max-width: 52ch; margin: 0 auto 20px; color: var(--muted); }
+
+    .contact p {
+      max-width: 58ch;
+      margin: 0 auto 20px;
+      color: var(--muted);
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     .footer {
       margin-top: 40px;
       padding-top: 20px;
@@ -258,217 +410,324 @@
       color: var(--muted);
     }
 
-    @media (max-width: 720px) {
-      .proofline { grid-template-columns: 1fr; gap: 14px; }
-      .grid { grid-template-columns: 1fr; }
+    @media (max-width: 760px) {
+      .proofline,
+      .grid,
+      .contribution-list {
+        grid-template-columns: 1fr;
+      }
+
+      .proofline { gap: 14px; }
       .ledger-item { grid-template-columns: 1fr; gap: 4px; }
       .hero { padding-top: 44px; }
+      .mission-panel { padding: 24px; }
+    }
+
+    @media (max-width: 520px) {
+      .container { padding-left: 18px; padding-right: 18px; }
+      .topbar { align-items: flex-start; }
+      .top-links { gap: 8px 14px; }
+      .hero-links { flex-direction: column; align-items: stretch; }
+      .hero-links a { text-align: center; }
+      .contact { padding: 28px 20px; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
+  <div class="container">
     <header class="topbar">
       <div class="brand">Padmaja Chunduru</div>
-      <nav class="top-links" aria-label="Site">
+      <nav class="top-links" aria-label="Site navigation">
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#writing">Writing</a>
+        <a href="#contribution">Contribution</a>
         <a href="#contact">Contact</a>
         <a href="https://linkedin.com/in/padmaja" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://github.com/pchunduru12" target="_blank" rel="noopener noreferrer">GitHub</a>
       </nav>
     </header>
 
-    <section class="hero">
-      <div class="eyebrow">Technology · Transformation · AI</div>
-      <h1>An enterprise operator who <em>builds</em> — focused on AI, institutions, and how work changes.</h1>
-      <p class="subtitle">
-        20+ years leading technology and transformation inside complex, regulated organizations —
-        Cantor Fitzgerald, McKinsey, and enterprise Oracle Cloud programs — now equally focused on
-        building with AI hands-on and writing about what it changes for work and society.
-      </p>
-      <div class="hero-links">
-        <a class="primary" href="#experience">View experience</a>
-        <a href="#projects">See what I've built</a>
-        <a href="#writing">Read my writing</a>
-      </div>
-      <div class="proofline">
-        <div><strong>Managing Director</strong> Global Head of Corporate Technology, Cantor Fitzgerald (14 yrs)</div>
-        <div><strong>Data transformation</strong> Finance Data Owner and governance leadership at McKinsey</div>
-        <div><strong>Builder</strong> AI applications shipped hands-on — a deployed music generation app, browser-based face recognition, enterprise AI patterns</div>
-      </div>
-    </section>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="eyebrow">Technology · Transformation · AI</div>
+        <h1 id="hero-title">An enterprise technology leader who <em>builds</em> — focused on AI, discovery, and institutional change.</h1>
+        <p class="subtitle">
+          More than 20 years leading technology and transformation inside complex, regulated organizations —
+          including Cantor Fitzgerald, McKinsey, and enterprise cloud programs — now applying that operating
+          experience to hands-on AI products and to the question of how faster experimentation becomes
+          meaningful real-world progress.
+        </p>
 
-    <section class="section" id="about">
-      <h2>About</h2>
-      <p>
-        I am a senior executive focused on helping organizations navigate complex transformation with clarity,
-        structure, and practical judgment. My work has spanned enterprise systems, operating model change,
-        data governance, reporting, and large-scale business technology initiatives in complex environments.
-      </p>
-      <p>
-        Over time, my interests have expanded beyond transformation delivery toward a broader question:
-        how do powerful technologies, especially AI, change work, institutions, incentives, and public life?
-        I explore that question two ways — by writing about it publicly, and by building AI applications
-        myself so my views stay grounded in what the technology can actually do.
-      </p>
-    </section>
-
-    <section class="section" id="focus">
-      <h2>Leadership Areas</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Enterprise Transformation</h3>
-          <p class="muted">Business and technology change across corporate functions — transformation roadmaps, process modernization, operating model redesign, and enterprise platform delivery.</p>
+        <div class="hero-links">
+          <a class="primary" href="#experience">View experience</a>
+          <a href="#projects">See what I've built</a>
+          <a href="#contribution">Where I can contribute</a>
+          <a href="#writing">Read my writing</a>
         </div>
-        <div class="card">
-          <h3>AI Readiness and Adoption</h3>
-          <p class="muted">What organizations need to adopt AI effectively: trusted data, governance, workflow redesign, executive alignment, and responsible implementation.</p>
+
+        <div class="proofline">
+          <div>
+            <strong>Managing Director</strong>
+            Global Head of Corporate Technology at Cantor Fitzgerald for 14 years
+          </div>
+          <div>
+            <strong>Transformation leader</strong>
+            Finance data ownership, governance, and enterprise change at McKinsey
+          </div>
+          <div>
+            <strong>Hands-on AI builder</strong>
+            Multimodal AI, browser-based machine learning, and knowledge-synthesis experiments
+          </div>
         </div>
-        <div class="card">
-          <h3>Data Governance and Operating Discipline</h3>
-          <p class="muted">Data ownership, quality frameworks, controls, and the organizational discipline required to support analytics, automation, and durable transformation.</p>
+      </section>
+
+      <section class="section" id="about">
+        <h2>About</h2>
+        <p>
+          I am a senior technology executive and advisor who has spent my career helping organizations turn
+          complex ideas into working capabilities. My experience spans enterprise systems, operating model
+          change, data governance, reporting, risk-sensitive environments, and large cross-functional technology programs.
+        </p>
+        <p>
+          I now explore AI in two connected ways: by building applications myself, and by thinking about how
+          powerful systems change work, institutions, incentives, and public life. Building keeps my thinking
+          grounded in what the technology can actually do, where it fails, and what it takes to make it useful.
+        </p>
+      </section>
+
+      <section class="section" id="focus">
+        <h2>Leadership Areas</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Enterprise Transformation</h3>
+            <p class="muted">
+              Turning strategic goals into roadmaps, operating models, delivery structures, and measurable outcomes
+              across complex business and technology environments.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>AI Systems and Product Building</h3>
+            <p class="muted">
+              Building with AI hands-on: connecting models, providers, data, interfaces, cost controls, evaluation,
+              and recovery paths into usable end-to-end products.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Discovery and Experimentation</h3>
+            <p class="muted">
+              Shortening the cycle from question to experiment, evaluation, learning, and improvement — while creating
+              the discipline needed to make those loops reliable and repeatable.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Data, Governance, and Institutional Change</h3>
+            <p class="muted">
+              Building trusted data, clear ownership, practical controls, and decision structures that allow new
+              technology to create lasting value rather than isolated demonstrations.
+            </p>
+          </div>
         </div>
-        <div class="card">
-          <h3>AI, Work, and Institutional Change</h3>
-          <p class="muted">How AI reshapes knowledge work, management structures, trust, governance, and the broader relationship between technology and society.</p>
+      </section>
+
+      <section class="section" id="experience">
+        <h2>Experience</h2>
+
+        <div class="ledger-item">
+          <div class="ledger-date">2023 – Present<br />2020 – 2021</div>
+          <div class="ledger-body">
+            <strong>Practice Lead, Oracle Cloud HCM/ERP</strong>
+            <div class="ledger-org">Athena Technologies</div>
+            <p class="muted">
+              Advise senior leaders on enterprise platform modernization, digital operating models, workforce and
+              financial processes, data, reporting, and AI readiness across business-critical programs.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section" id="experience">
-      <h2>Experience</h2>
-
-      <div class="ledger-item">
-        <div class="ledger-date">2023 – Present<br />2020 – 2021</div>
-        <div class="ledger-body">
-          <strong>Practice Lead, Oracle Cloud HCM/ERP</strong>
-          <div class="ledger-org">Athena Technologies</div>
-          <p class="muted">Advising senior leaders on HR and enterprise platform modernization, digital operating models, workforce analytics, and AI readiness across business-critical functions.</p>
+        <div class="ledger-item">
+          <div class="ledger-date">Ongoing</div>
+          <div class="ledger-body">
+            <strong>Technology Advisor</strong>
+            <div class="ledger-org">AptaPharma — cGMP pharmaceutical CDMO, New Jersey</div>
+            <p class="muted">
+              Advise on technology selection and solutions for a U.S.-based contract development and manufacturing
+              organization, with direct exposure to pharmaceutical operations, quality, and regulated environments.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="ledger-item">
-        <div class="ledger-date">Ongoing</div>
-        <div class="ledger-body">
-          <strong>Technology Advisor</strong>
-          <div class="ledger-org">AptaPharma — cGMP pharmaceutical CDMO, New Jersey</div>
-          <p class="muted">Advising on technology selection and solutions for a U.S.-based contract development and manufacturing organization — direct exposure to how technology decisions are made inside pharma manufacturing and regulatory environments.</p>
+        <div class="ledger-item">
+          <div class="ledger-date">2021 – 2023</div>
+          <div class="ledger-body">
+            <strong>Data Transformation Leader — Finance Data Owner</strong>
+            <div class="ledger-org">McKinsey &amp; Company</div>
+            <p class="muted">
+              Led finance and enterprise data transformation initiatives, including governance models, ownership,
+              quality, transformation roadmaps, analytics, and delivery priorities.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="ledger-item">
-        <div class="ledger-date">2021 – 2023</div>
-        <div class="ledger-body">
-          <strong>Data Transformation Leader — Finance Data Owner</strong>
-          <div class="ledger-org">McKinsey &amp; Company</div>
-          <p class="muted">Led finance and enterprise data transformation initiatives: governance models, transformation roadmaps, and delivery priorities at the intersection of data quality, analytics, operating model change, and AI enablement.</p>
+        <div class="ledger-item">
+          <div class="ledger-date">2006 – 2020</div>
+          <div class="ledger-body">
+            <strong>Global Head of Corporate Technology, Managing Director</strong>
+            <div class="ledger-org">Cantor Fitzgerald</div>
+            <p class="muted">
+              Led technology strategy and execution across HR, Finance, Legal, Compliance, Risk, Audit, and other
+              corporate functions in a global financial-services environment. Built and led large cross-functional
+              teams while modernizing platforms, controls, analytics, automation, and executive reporting.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="ledger-item">
-        <div class="ledger-date">2006 – 2020</div>
-        <div class="ledger-body">
-          <strong>Global Head of Corporate Technology, Managing Director</strong>
-          <div class="ledger-org">Cantor Fitzgerald</div>
-          <p class="muted">Led enterprise technology strategy and execution across HR, Finance, Legal, Compliance, Risk, Audit, and other corporate functions in a global financial services environment. Oversaw modernization of workforce systems and enterprise platforms while strengthening governance, controls, analytics, automation, and executive reporting.</p>
+        <div class="ledger-item">
+          <div class="ledger-date">Prior to 2006</div>
+          <div class="ledger-body">
+            <strong>Technical PM, Enterprise Architect, Developer</strong>
+            <div class="ledger-org">McKinsey &amp; Company</div>
+            <p class="muted">
+              Delivered enterprise technology solutions and transformation programs, building a foundation across
+              architecture, software delivery, program execution, and large-scale systems.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="ledger-item">
-        <div class="ledger-date">Prior to 2006</div>
-        <div class="ledger-body">
-          <strong>Technical PM, Enterprise Architect, Developer</strong>
-          <div class="ledger-org">McKinsey &amp; Company</div>
-          <p class="muted">Delivered enterprise technology solutions and supported implementation and transformation programs, building a strong foundation across architecture, delivery, and large-scale systems.</p>
+      <section class="section" id="projects">
+        <h2>Projects and Experiments</h2>
+        <p class="muted">
+          I build to understand — and to learn what breaks. These projects reflect hands-on experimentation with
+          models, workflows, reliability, privacy, cost, and user experience.
+        </p>
+
+        <div class="project">
+          <a class="title" href="https://github.com/pchunduru12/synthwave" target="_blank" rel="noopener noreferrer">SynthWave</a>
+          <span class="tag">Multimodal AI · Full stack · Deployed</span>
+          <p class="muted">
+            Designed and deployed an end-to-end AI application that coordinates text generation, image generation
+            and editing, music providers, media processing, storage, authentication, usage tracking, and progressive
+            previews. The work required continuous comparison of models and providers on quality, latency, reliability,
+            and cost, plus fallbacks and recovery paths when individual services failed.
+          </p>
         </div>
-      </div>
-    </section>
 
-    <section class="section" id="projects">
-      <h2>Projects &amp; Code</h2>
-      <p class="muted">I build in order to understand. These are public projects on <a href="https://github.com/pchunduru12" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+        <div class="project">
+          <a class="title" href="https://github.com/pchunduru12/photocluster" target="_blank" rel="noopener noreferrer">PhotoCluster</a>
+          <span class="tag">Browser ML · Privacy first</span>
+          <p class="muted">
+            Built neural face recognition that runs entirely in the browser: users can group photos by person, name
+            them, and download sorted folders. No server, no uploads, and no tracking — a practical demonstration that
+            useful AI does not have to require surrendering personal data.
+          </p>
+        </div>
 
-      <div class="project">
-        <a class="title" href="https://github.com/pchunduru12/synthwave" target="_blank" rel="noopener noreferrer">SynthWave</a>
-        <span class="tag">AI · Full-stack · Deployed</span>
-        <p class="muted">An AI music generation app: a short prompt becomes a complete song — title, lyrics, cover art, and music — rendered as playable audio or video. Multi-provider backend (OpenAI, Suno, MiniMax) with built-in cost governance: per-user spending limits, a cost estimator, and usage tracking. TypeScript, Expo, Docker — running in a private deployment.</p>
-      </div>
+        <div class="project">
+          <span class="title-static">Knowledge Compiler</span>
+          <span class="tag">AI research workflow · Prototype</span>
+          <p class="muted">
+            Developed an AI-assisted knowledge-synthesis workflow for ingesting long-form sources, extracting and
+            organizing ideas, handling context and rate limits, and turning fragmented material into a navigable
+            knowledge system. The project explored how AI can shorten the loop between information gathering,
+            synthesis, testing, and learning.
+          </p>
+        </div>
 
-      <div class="project">
-        <a class="title" href="https://github.com/pchunduru12/photocluster" target="_blank" rel="noopener noreferrer">PhotoCluster</a>
-        <span class="tag">AI · Privacy-first</span>
-        <p class="muted">Neural face recognition that runs entirely in the browser: group photos by person, name them, and download sorted folders. No server, no uploads, no tracking — a working demonstration that useful AI doesn't have to mean surrendering your data.</p>
-      </div>
+        <div class="project">
+          <a class="title" href="https://github.com/pchunduru12/Oracle-AI-Blog" target="_blank" rel="noopener noreferrer">Oracle + AI Patterns</a>
+          <span class="tag">Enterprise architecture · Applied AI</span>
+          <p class="muted">
+            Practical articles and implementation patterns at the intersection of enterprise platforms and AI,
+            including architecture, governance, automation, and developer-focused examples.
+          </p>
+        </div>
+      </section>
 
-      <div class="project">
-        <a class="title" href="https://github.com/pchunduru12/Oracle-AI-Blog" target="_blank" rel="noopener noreferrer">Oracle + AI Patterns</a>
-        <span class="tag">Enterprise · Writing</span>
-        <p class="muted">Oracle ERP and Fusion Cloud architecture articles with practical AI use cases, implementation patterns, and developer-focused examples — where enterprise platforms meet applied AI.</p>
-      </div>
+      <section class="section" id="writing">
+        <h2>Selected Writing</h2>
 
-    </section>
+        <div class="article">
+          <a href="https://medium.com/p/b9cd4b96af83" target="_blank" rel="noopener noreferrer">The Quietest Catastrophe</a>
+          <p class="muted">AI, passivity, and the slow forgetting of how to think.</p>
+        </div>
 
-    <section class="section" id="writing">
-      <h2>Selected Writing</h2>
+        <div class="article">
+          <a href="https://medium.com/p/3a4e8a97bd06" target="_blank" rel="noopener noreferrer">AI and Social Stability</a>
+          <p class="muted">Abundant AI, uneven economic outcomes, and the institutions needed to manage the transition.</p>
+        </div>
 
-      <div class="article">
-        <a href="https://medium.com/p/b9cd4b96af83" target="_blank" rel="noopener noreferrer">The Quietest Catastrophe</a>
-        <p class="muted">AI, passivity, and the slow forgetting of how to think.</p>
-      </div>
-      <div class="article">
-        <a href="https://medium.com/p/3a4e8a97bd06" target="_blank" rel="noopener noreferrer">AI and Social Stability</a>
-        <p class="muted">Abundant AI and empty paychecks.</p>
-      </div>
-      <div class="article">
-        <a href="https://medium.com/@pchunduru/the-future-at-a-crossroads-ai-immigration-and-social-cohesion-in-america-a1c03bb0cb3d" target="_blank" rel="noopener noreferrer">AI, Immigration, and Social Cohesion</a>
-        <p class="muted">How AI intersects with labor, migration, institutions, and the social fabric of the United States.</p>
-      </div>
-      <div class="article">
-        <a href="https://medium.com/@pchunduru/redefining-tomorrow-ais-promise-and-perils-uncovered-05abee7d7d45" target="_blank" rel="noopener noreferrer">AI's Promise and Perils</a>
-        <p class="muted">A balanced look at the opportunities and risks AI creates for institutions, decision-making, and public life.</p>
-      </div>
-    </section>
+        <div class="article">
+          <a href="https://medium.com/@pchunduru/the-future-at-a-crossroads-ai-immigration-and-social-cohesion-in-america-a1c03bb0cb3d" target="_blank" rel="noopener noreferrer">AI, Immigration, and Social Cohesion</a>
+          <p class="muted">How AI intersects with labor, migration, institutions, and the social fabric of the United States.</p>
+        </div>
 
-    <section class="section" id="looking">
-      <h2>What I'm Looking For</h2>
-      <p>
-        At this stage of my career I'm optimizing for mission and contribution. I want to work with teams
-        using AI to genuinely benefit people — and to help them build the institution around the science:
-        trusted data, governance, operations, and partnerships with the regulated industries where
-        breakthroughs actually land.
-      </p>
-      <ul class="muted">
-        <li>I've led technology change inside complex organizations for two decades, and I've seen up close how technology changes the way organizations run — and how those changes affect the people inside them.</li>
-        <li>I bridge business, technology, governance, and leadership teams: bringing structure to ambiguity, translating across stakeholders, and helping leaders make practical decisions in moments of change.</li>
-        <li>The questions that matter most to me are not only what technology can do, but what it changes — how work is organized, where trust is built or lost, and where new forms of fragility emerge.</li>
-      </ul>
-    </section>
+        <div class="article">
+          <a href="https://medium.com/@pchunduru/redefining-tomorrow-ais-promise-and-perils-uncovered-05abee7d7d45" target="_blank" rel="noopener noreferrer">AI's Promise and Perils</a>
+          <p class="muted">A balanced look at the opportunities, governance questions, and risks created by advanced AI.</p>
+        </div>
+      </section>
 
-    <section class="section" id="education">
-      <h2>Education</h2>
-      <ul>
-        <li>Texas McCombs School of Business — Post Graduate Program, AI for Leaders</li>
-        <li>Acharya N.G. Ranga Agricultural University — MS in Agriculture, Statistics, and Computers</li>
-        <li>Acharya N.G. Ranga Agricultural University — BS in Agriculture</li>
-      </ul>
-    </section>
+      <section class="section" id="contribution">
+        <h2>Where I Hope to Contribute</h2>
+        <div class="mission-panel">
+          <p>
+            At this stage of my career, I am optimizing for mission, learning, and contribution. I want to work with
+            a small, ambitious team using AI to accelerate scientific, technical, or societal progress.
+          </p>
+          <p>
+            I am especially interested in work that shortens the loop from a good question to an experiment, a result,
+            and the next better question. My contribution is not to present myself as a frontier ML researcher; it is
+            to help ambitious technical work become an effective operating capability.
+          </p>
+          <p>
+            I bring experience leading large technology organizations, translating complex goals into execution,
+            connecting technical and business teams, introducing new capabilities into regulated environments, and
+            building the institution around the work — without adding unnecessary bureaucracy.
+          </p>
 
-    <div class="contact" id="contact">
-      <h2>Get in touch</h2>
-      <p>If you're building something where deep enterprise experience and genuine curiosity about AI would help, I'd love to hear from you.</p>
-      <div class="hero-links" style="justify-content:center;">
-        <a class="primary" href="mailto:pchunduru@gmail.com">Email me</a>
-        <a href="https://linkedin.com/in/padmaja" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://github.com/pchunduru12" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </div>
+          <ul class="contribution-list">
+            <li>Turn ambiguous technical goals into executable programs and measurable outcomes</li>
+            <li>Connect research, engineering, operations, governance, and external partners</li>
+            <li>Build fast feedback loops, decision processes, and reliable operating rhythms</li>
+            <li>Help prototypes become dependable products and real-world capabilities</li>
+            <li>Scale teams and programs while protecting speed, quality, and technical culture</li>
+            <li>Bring enterprise and regulated-industry perspective to high-impact technology</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <h2>Education</h2>
+        <ul>
+          <li>Texas McCombs School of Business — Post Graduate Program, AI for Leaders</li>
+          <li>Acharya N.G. Ranga Agricultural University — MS in Agriculture, Statistics, and Computers</li>
+          <li>Acharya N.G. Ranga Agricultural University — BS in Agriculture</li>
+        </ul>
+      </section>
+
+      <section class="contact" id="contact">
+        <h2>Get in touch</h2>
+        <p>
+          If you are building an ambitious AI, scientific, or engineering organization where experienced technology
+          leadership and a hands-on builder's mindset would help, I would value a conversation.
+        </p>
+        <div class="contact-links">
+          <a class="button-link primary" href="mailto:pchunduru@gmail.com">Email me</a>
+          <a class="button-link" href="https://linkedin.com/in/padmaja" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="button-link" href="https://github.com/pchunduru12" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
-      <div>© 2026 Padmaja Chunduru</div>
-      <div>Technology · Transformation · AI</div>
+      <span>© 2026 Padmaja Chunduru</span>
+      <span>Technology · Transformation · AI</span>
     </footer>
   </div>
 </body>
